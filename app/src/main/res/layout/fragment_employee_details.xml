@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.EmployeeDetails"
+    android:paddingVertical="32dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_user_nim_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Loading NIM..." />
+
+        <TextView
+            android:id="@+id/txt_user_name_detail"
+            android:text="Loading Name..."
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Go Back"
+            android:layout_marginTop="16dp"
+            android:textAllCaps="false"
+            />
+
+        <LinearLayout
+            android:id="@+id/detail_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="24dp"
+            android:visibility="gone">
+            <TextView
+                android:id="@+id/txt_detail_employee_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Marco Elstad"
+                android:textColor="@color/blue"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                />
+
+            <fragment
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                xmlns:map="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="320dp"
+                android:layout_marginVertical="8dp"
+                android:id="@+id/map_employee"
+                map:cameraZoom="8"
+                map:uiZoomGestures="true"
+                map:uiZoomControls="true"
+                map:uiCompass="true"
+                map:uiScrollGestures="true"
+                />
+
+            <TextView
+                android:id="@+id/txt_detail_employee_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="City: Skjeberg, Norway" />
+            <TextView
+                android:id="@+id/txt_detail_employee_phone_cell"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Phone: 5323211 / 925232323" />
+            <TextView
+                android:id="@+id/txt_detail_employee_member_since"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Member since: April 2005" />
+
+            <TextView
+                android:id="@+id/txt_detail_employee_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Email: vincenthadinata222@gmail.com" />
+
+            <Button
+                android:id="@+id/btn_add_to_address_book"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add to My Address Book"
+                android:textAllCaps="false"
+                android:layout_marginTop="32dp"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txt_detail_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:visibility="visible"
+            android:text="Loading employee details..." />
+    </LinearLayout>
+
+</ScrollView>
